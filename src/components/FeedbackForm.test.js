@@ -69,7 +69,6 @@ describe("<FeedbackForm />", () => {
 
   test("if the text is less than 10 chracter or invalid", () => {
     render(<FeedbackForm />);
-
     const inputEl = screen.getByTestId("text-input");
     userEvent.type(inputEl, "test");
 
