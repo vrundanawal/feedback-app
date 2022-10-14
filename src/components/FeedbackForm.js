@@ -49,8 +49,13 @@ const FeedbackForm = ({ handleAdd }) => {
             placeholder="Write a review"
             onChange={handleTextChange}
             value={text}
+            data-testid="text-input"
           />
-          <Button type="submit" isDisabled={btnDisabled}>
+          <Button
+            type="submit"
+            data-testid="add-word-button"
+            isDisabled={btnDisabled}
+          >
             Send
           </Button>
         </div>
