@@ -59,7 +59,11 @@ const FeedbackForm = ({ handleAdd }) => {
             Send
           </Button>
         </div>
-        {message && <div className="message">{message}</div>}
+        {message && (
+          <div data-testid="message" className="message">
+            {message}
+          </div>
+        )}
       </form>
     </Card>
   );
