@@ -13,6 +13,16 @@ describe("<FeedbackStats />", () => {
     render(<FeedbackStats feedback={FeedbackData} />);
     const average = screen.getByTestId("average-rating");
     expect(average).toBeInTheDocument();
-    //expect(average).toHaveValue("test");
   });
+
+  test("it should update the reviews", () => {
+    render(<FeedbackStats feedback={FeedbackData} />);
+    const feedBackReviews = screen.getByTestId("feedback-reviews");
+    expect(feedBackReviews).toBeInTheDocument();
+  });
+
+  // test("it should update the reviews", () => {
+  //   render(<FeedbackStats feedback={FeedbackData} />);
+  //   expect(screen.getByText("Reviews")).toBeInTheDocument();
+  // });
 });

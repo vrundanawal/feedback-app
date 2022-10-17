@@ -182,7 +182,9 @@ exports[`AppComponent should take a snapshot 1`] = `
     <div
       class="feedback-stats"
     >
-      <h4>
+      <h4
+        data-testid="feedback-reviews"
+      >
         3 Reviews
       </h4>
       <h4

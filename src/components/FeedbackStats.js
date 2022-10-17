@@ -11,7 +11,7 @@ const FeedbackStats = ({ feedback }) => {
   average = average.toFixed(1).replace(/[.,]0$/, "");
   return (
     <div className="feedback-stats">
-      <h4>{feedback.length} Reviews</h4>
+      <h4 data-testid="feedback-reviews">{feedback.length} Reviews</h4>
       <h4 data-testid="average-rating">
         Average Rating : {isNaN(average) ? 0 : average}
       </h4>
