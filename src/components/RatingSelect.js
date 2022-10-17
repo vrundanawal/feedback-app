@@ -17,6 +17,7 @@ const RatingSelect = ({ select }) => {
           id="num1"
           name="rating"
           value="1"
+          data-testid="select-test"
           onChange={handleChange}
           checked={selected === 1}
         />

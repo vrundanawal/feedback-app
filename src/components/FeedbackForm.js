@@ -34,6 +34,8 @@ const FeedbackForm = ({ handleAdd }) => {
       //console.log(newFeedback);
       handleAdd(newFeedback);
       setText("");
+      //set back to disable
+      setBtnDisabled(true);
     }
   };
 

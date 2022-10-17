@@ -29,6 +29,7 @@ exports[`AppComponent should take a snapshot 1`] = `
         >
           <li>
             <input
+              data-testid="select-test"
               id="num1"
               name="rating"
               type="radio"

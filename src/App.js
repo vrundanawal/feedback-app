@@ -20,7 +20,7 @@ const App = () => {
   };
 
   const deleteFeedback = (id) => {
-    console.log("app " + id);
+    //console.log("app " + id);
     if (window.confirm("Are you sure you want to delete?")) {
       setFeedBack(feedback.filter((item) => item.id !== id));
     }
