@@ -209,6 +209,7 @@ exports[`AppComponent should take a snapshot 1`] = `
           </div>
           <button
             class="close"
+            data-testid="delete-list"
           >
             <svg
               color="purple"
@@ -247,6 +248,7 @@ exports[`AppComponent should take a snapshot 1`] = `
           </div>
           <button
             class="close"
+            data-testid="delete-list"
           >
             <svg
               color="purple"
@@ -285,6 +287,7 @@ exports[`AppComponent should take a snapshot 1`] = `
           </div>
           <button
             class="close"
+            data-testid="delete-list"
           >
             <svg
               color="purple"
