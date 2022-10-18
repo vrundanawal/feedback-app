@@ -147,7 +147,6 @@ exports[`AppComponent should take a snapshot 1`] = `
           </li>
           <li>
             <input
-              checked=""
               id="num10"
               name="rating"
               type="radio"

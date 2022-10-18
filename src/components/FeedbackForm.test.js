@@ -1,28 +1,3 @@
-//import { screen, render } from "@testing-library/react";
-//import FeedbackForm from "./FeedbackForm";
-
-// describe("FeedbackForm", () => {
-//   it("should render FeedbackForm component", () => {
-//     expect(FeedbackForm).toBeTruthy();
-//   });
-
-//   it("should display the the default text inside the input", async () => {
-//     const inputElement = await screen.findByRole("input", {
-//       value: "welcome",
-//     });
-//     render(<FeedbackForm {...inputElement} />);
-
-//     const testingBtn = screen.getByRole("button");
-//     expect(testingBtn).toBeDisabled();
-//   });
-//   it('should show the error message if the input is lees than 10 character', () => {
-//     render(<FeedbackForm />);
-//     const inputText = 'Welcome'
-//   const testingBtn = screen.getByRole("button")
-//   expect(testingBtn).toBeDisabled();
-//   })
-// });
-
 import { fireEvent, render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import FeedbackForm from "./FeedbackForm";
@@ -71,11 +46,17 @@ describe("<FeedbackForm />", () => {
     render(<FeedbackForm />);
     const inputEl = screen.getByTestId("text-input");
     userEvent.type(inputEl, "test");
-
     expect(screen.getByTestId("text-input")).toHaveValue("test");
     expect(screen.queryByTestId("message")).toBeInTheDocument();
     expect(screen.queryByTestId("message").textContent).toEqual(
       "Text must be at least 10 characters"
     );
+  });
+
+  test("renders the form with selected value", () => {
+    render(<FeedbackForm />);
+    const selectInput = screen.getByTestId("select-test");
+    fireEvent.change(selectInput, { target: { value: "1" } });
+    expect(selectInput.value).toBe("1");
   });
 });
