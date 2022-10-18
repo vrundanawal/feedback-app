@@ -1,5 +1,6 @@
 import "@testing-library/jest-dom";
-import { screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import FeedbackData from "../data/FeedbackData";
 import FeedbackItem from "./FeedbackItem";
 
 //import userEvent from "@testing-library/user-event";
@@ -12,6 +13,9 @@ describe("<FeedbackItem/>", () => {
   it("should have delete button", () => {
     // const deleteBtn = screen.getByTestId("delete-list");
     // expect(deleteBtn).toBeInTheDocument();
-    expect(screen.queryByTestId("delete-list")).not.toBeInTheDocument();
+    render(<FeedbackItem item={FeedbackData[0]} />);
+    const deleteBtn = screen.getByTestId("delete-list");
+    expect(deleteBtn).toBeInTheDocument();
+    //expect(screen.queryByTestId("delete-list")).not.toBeInTheDocument();
   });
 });
