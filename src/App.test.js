@@ -13,3 +13,10 @@ describe("AppComponent", () => {
     expect(asFragment(<App />)).toMatchSnapshot();
   });
 });
+
+//test case for randomly generate uuid
+jest.mock("uuid", () => {
+  return {
+    v4: jest.fn(() => 1),
+  };
+});

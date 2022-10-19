@@ -6,7 +6,7 @@ import FeedbackItem from "./FeedbackItem";
 const FeedbackList = ({ feedback, handleDelete }) => {
   //console.log(feedback);
   if (!feedback || feedback.length === 0) {
-    return <p>No FeedBack is available</p>;
+    return <p data-testid="error-message">No FeedBack is available</p>;
   }
 
   //not to add any animation liabrary for this one. woking without add framer-motion package
