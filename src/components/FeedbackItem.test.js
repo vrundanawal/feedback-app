@@ -2,7 +2,7 @@ import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import FeedbackData from "../data/FeedbackData";
 import FeedbackItem from "./FeedbackItem";
-
+import { shallow } from "enzyme";
 //import userEvent from "@testing-library/user-event";
 
 describe("<FeedbackItem/>", () => {
@@ -18,4 +18,9 @@ describe("<FeedbackItem/>", () => {
     expect(deleteBtn).toBeInTheDocument();
     //expect(screen.queryByTestId("delete-list")).not.toBeInTheDocument();
   });
+});
+
+test("should test feedbackItem component", () => {
+  const wrapper = shallow(<FeedbackItem item={FeedbackData[0]} />);
+  expect(wrapper).toMatchSnapshot();
 });
