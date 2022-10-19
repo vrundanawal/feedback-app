@@ -2,6 +2,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import FeedbackForm from "./FeedbackForm";
 import userEvent from "@testing-library/user-event";
+import { shallow } from "enzyme";
 
 describe("<FeedbackForm />", () => {
   it("should render FeedbackForm component", () => {
@@ -60,3 +61,18 @@ describe("<FeedbackForm />", () => {
     expect(selectInput.value).toBe("1");
   });
 });
+
+//with enzyme  write a snapshot testing
+test("should test feedback form component", () => {
+  const wrapper = shallow(<FeedbackForm />);
+  expect(wrapper).toMatchSnapshot();
+});
+//add feedback to list with handler
+// test("should handle onSubmit handler", () => {
+//   const onSubmitSpy = jest.fn();
+//   const wrapper = shallow(<FeedbackForm handleAdd={onSubmitSpy} />);
+//   expect(wrapper).toMatchSnapshot();
+//   wrapper.find("form").simulate("submit");
+
+//   expect(onSubmitSpy).toHaveBeenCalled();
+// });

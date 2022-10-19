@@ -32,9 +32,12 @@ const FeedbackForm = ({ handleAdd }) => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    if (e && e.preventDefault) {
+      e.preventDefault();
+    }
+    // e.preventDefault();
     if (!rating) {
-      alert("please select the rating");
+      window.alert("please select the rating");
       return;
     }
     if (text.trim().length > 10 && rating !== "") {
