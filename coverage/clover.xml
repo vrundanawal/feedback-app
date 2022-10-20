@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1666194820897" clover="3.2.0">
-  <project timestamp="1666194820897" name="All files">
+<coverage generated="1666263171845" clover="3.2.0">
+  <project timestamp="1666263171845" name="All files">
     <metrics statements="77" coveredstatements="56" conditionals="30" coveredconditionals="14" methods="19" coveredmethods="13" elements="126" coveredelements="83" complexity="0" loc="77" ncloc="77" packages="5" files="12" classes="12"/>
     <package name="src">
       <metrics statements="11" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="1"/>
@@ -32,25 +32,25 @@
       <file name="FeedbackForm.js" path="C:\Users\2190013\Udemy-React\Brad Traversy\feedback-app-props-drilling\src\components\FeedbackForm.js">
         <metrics statements="33" coveredstatements="19" conditionals="18" coveredconditionals="8" methods="4" coveredmethods="2"/>
         <line num="6" count="3" type="stmt"/>
-        <line num="7" count="28" type="stmt"/>
-        <line num="8" count="28" type="stmt"/>
-        <line num="9" count="28" type="stmt"/>
-        <line num="10" count="28" type="stmt"/>
-        <line num="11" count="28" type="stmt"/>
-        <line num="13" count="28" type="stmt"/>
-        <line num="15" count="19" type="cond" truecount="2" falsecount="0"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
+        <line num="7" count="30" type="stmt"/>
+        <line num="8" count="30" type="stmt"/>
+        <line num="9" count="30" type="stmt"/>
+        <line num="10" count="30" type="stmt"/>
+        <line num="11" count="30" type="stmt"/>
+        <line num="13" count="30" type="stmt"/>
+        <line num="15" count="20" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
         <line num="18" count="16" type="cond" truecount="4" falsecount="0"/>
         <line num="19" count="13" type="stmt"/>
         <line num="20" count="13" type="stmt"/>
         <line num="22" count="3" type="stmt"/>
         <line num="23" count="3" type="stmt"/>
-        <line num="25" count="19" type="stmt"/>
-        <line num="28" count="28" type="stmt"/>
+        <line num="25" count="20" type="stmt"/>
+        <line num="28" count="30" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
-        <line num="34" count="28" type="stmt"/>
+        <line num="34" count="30" type="stmt"/>
         <line num="35" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="36" count="0" type="stmt"/>
         <line num="39" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -63,7 +63,7 @@
         <line num="51" count="0" type="stmt"/>
         <line num="52" count="0" type="stmt"/>
         <line num="53" count="0" type="stmt"/>
-        <line num="57" count="28" type="stmt"/>
+        <line num="57" count="30" type="stmt"/>
       </file>
       <file name="FeedbackItem.js" path="C:\Users\2190013\Udemy-React\Brad Traversy\feedback-app-props-drilling\src\components\FeedbackItem.js">
         <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
@@ -103,14 +103,14 @@
       <file name="Button.js" path="C:\Users\2190013\Udemy-React\Brad Traversy\feedback-app-props-drilling\src\components\shared\Button.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="3" type="stmt"/>
-        <line num="5" count="27" type="stmt"/>
+        <line num="5" count="29" type="stmt"/>
         <line num="12" count="3" type="stmt"/>
         <line num="17" count="3" type="stmt"/>
       </file>
       <file name="Card.js" path="C:\Users\2190013\Udemy-React\Brad Traversy\feedback-app-props-drilling\src\components\shared\Card.js">
         <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="4" count="6" type="stmt"/>
-        <line num="8" count="31" type="stmt"/>
+        <line num="8" count="33" type="stmt"/>
         <line num="22" count="6" type="stmt"/>
         <line num="26" count="6" type="stmt"/>
       </file>

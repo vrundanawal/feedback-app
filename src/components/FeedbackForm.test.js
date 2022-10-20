@@ -1,8 +1,21 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import FeedbackForm from "./FeedbackForm";
 import userEvent from "@testing-library/user-event";
 import { shallow } from "enzyme";
+
+afterEach(cleanup);
+
+describe("Feedback form testing", () => {
+  it("should be able to type name input field", () => {
+    const { getByTestId } = render(<FeedbackForm />);
+
+    fireEvent.change(getByTestId("text-input"), {
+      target: { value: "Muhammad Lahin" },
+    });
+    expect(getByTestId("text-input").value).toBe("Muhammad Lahin");
+  });
+});
 
 describe("<FeedbackForm />", () => {
   it("should render FeedbackForm component", () => {
@@ -67,6 +80,24 @@ test("should test feedback form component", () => {
   const wrapper = shallow(<FeedbackForm />);
   expect(wrapper).toMatchSnapshot();
 });
+
+//get the input value
+// it("get the input value when user type in", () => {
+//   // const wrapper = shallow(<FeedbackForm />);
+//   // wrapper.find("input").simulate("change", {
+//   //   target: { value: "new input" },
+//   // });
+//   // wrapper.update();
+//   // expect(wrapper.find("input").prop("value")).toEqual("new input");
+//   // const event = { target: { name: "somename", value: "somevalue" } };
+//   // const wrapper = mount(<FeedbackForm />);
+//   // const handleChangeSpy = jest.spy(wrapper.instance(), "handleChange");
+//   // wrapper.update();
+//   // wrapper.ref("somename").simulate("change", event);
+//   // // eslint-disable-next-line jest/valid-expect
+//   // expect(handleChangeSpy.calledOnce).to.equal(true);
+// });
+
 //add feedback to list with handler
 // test("should handle onSubmit handler", () => {
 //   const onSubmitSpy = jest.fn();
