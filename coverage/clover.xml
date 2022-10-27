@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1666364303019" clover="3.2.0">
-  <project timestamp="1666364303019" name="All files">
-    <metrics statements="77" coveredstatements="56" conditionals="30" coveredconditionals="14" methods="19" coveredmethods="13" elements="126" coveredelements="83" complexity="0" loc="77" ncloc="77" packages="5" files="12" classes="12"/>
+<coverage generated="1666866996649" clover="3.2.0">
+  <project timestamp="1666866996649" name="All files">
+    <metrics statements="77" coveredstatements="57" conditionals="30" coveredconditionals="15" methods="19" coveredmethods="13" elements="126" coveredelements="85" complexity="0" loc="77" ncloc="77" packages="5" files="12" classes="12"/>
     <package name="src">
       <metrics statements="11" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="1"/>
       <file name="App.js" path="C:\Users\2190013\Udemy-React\Brad Traversy\feedback-app-props-drilling\src\App.js">
@@ -23,7 +23,7 @@
       </file>
     </package>
     <package name="src.components">
-      <metrics statements="55" coveredstatements="39" conditionals="24" coveredconditionals="12" methods="12" coveredmethods="9"/>
+      <metrics statements="55" coveredstatements="40" conditionals="24" coveredconditionals="13" methods="12" coveredmethods="9"/>
       <file name="AboutIconLink.js" path="C:\Users\2190013\Udemy-React\Brad Traversy\feedback-app-props-drilling\src\components\AboutIconLink.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="2" type="stmt"/>
@@ -73,10 +73,10 @@
         <line num="22" count="4" type="stmt"/>
       </file>
       <file name="FeedbackList.js" path="C:\Users\2190013\Udemy-React\Brad Traversy\feedback-app-props-drilling\src\components\FeedbackList.js">
-        <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="6" count="3" type="stmt"/>
-        <line num="8" count="2" type="cond" truecount="3" falsecount="1"/>
-        <line num="9" count="0" type="stmt"/>
+        <line num="8" count="4" type="cond" truecount="4" falsecount="0"/>
+        <line num="9" count="2" type="stmt"/>
         <line num="22" count="2" type="stmt"/>
         <line num="26" count="6" type="stmt"/>
       </file>
