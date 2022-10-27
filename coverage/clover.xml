@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1666874146894" clover="3.2.0">
-  <project timestamp="1666874146894" name="All files">
+<coverage generated="1666876385250" clover="3.2.0">
+  <project timestamp="1666876385250" name="All files">
     <metrics statements="77" coveredstatements="58" conditionals="30" coveredconditionals="15" methods="19" coveredmethods="14" elements="126" coveredelements="87" complexity="0" loc="77" ncloc="77" packages="5" files="12" classes="12"/>
     <package name="src">
       <metrics statements="11" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="1"/>
@@ -74,7 +74,7 @@
       </file>
       <file name="FeedbackList.js" path="C:\Users\2190013\Udemy-React\Brad Traversy\feedback-app-props-drilling\src\components\FeedbackList.js">
         <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-        <line num="6" count="4" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
         <line num="8" count="4" type="cond" truecount="4" falsecount="0"/>
         <line num="9" count="2" type="stmt"/>
         <line num="22" count="2" type="stmt"/>
