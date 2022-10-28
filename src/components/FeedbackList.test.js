@@ -23,8 +23,15 @@ test("It should show the message if there is no Feedback data available", () => 
   expect(message).toBeInTheDocument();
 });
 
-test("It will return the jsx if length is 0", () => {
-  render(<FeedbackList feedback={FeedbackData.length === 0} />);
+// test("It will return the jsx if length is 0", () => {
+//   render(<FeedbackList feedback={FeedbackData.length === 0} />);
+//   const message = screen.getByTestId("error-message");
+//   expect(message).toBeInTheDocument();
+// });
+
+test("It will show the error", () => {
+  const emptyArray = [];
+  render(<FeedbackList feedback={emptyArray} />);
   const message = screen.getByTestId("error-message");
   expect(message).toBeInTheDocument();
 });

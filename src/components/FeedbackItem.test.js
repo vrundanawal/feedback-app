@@ -39,5 +39,6 @@ test("<FeedbackList/>", () => {
   );
   const deleteBtn = getByTestId("delete-list");
   fireEvent.click(deleteBtn);
-  expect(handleDelete).toHaveBeenCalledTimes(1);
+  // expect(handleDelete).toHaveBeenCalledTimes(1);
+  expect(handleDelete).toBeCalledWith(item.id);
 });
