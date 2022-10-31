@@ -184,7 +184,7 @@ exports[`AppComponent should take a snapshot 1`] = `
       <h4
         data-testid="feedback-reviews"
       >
-        3 Reviews
+        4 Reviews
       </h4>
       <h4
         data-testid="average-rating"
@@ -230,7 +230,7 @@ exports[`AppComponent should take a snapshot 1`] = `
           <div
             class="text-display"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. consequuntur vel vitae commodi alias voluptatem est voluptatum ipsa quae.
+            Using context Api Item 1.
           </div>
         </div>
       </div>
@@ -269,7 +269,7 @@ exports[`AppComponent should take a snapshot 1`] = `
           <div
             class="text-display"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. consequuntur vel vitae commodi alias voluptatem est voluptatum ipsa quae.
+            Using context Api Item 2
           </div>
         </div>
       </div>
@@ -308,7 +308,46 @@ exports[`AppComponent should take a snapshot 1`] = `
           <div
             class="text-display"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. consequuntur vel vitae commodi alias voluptatem est voluptatum ipsa quae.
+            Using context Api Item 3
+          </div>
+        </div>
+      </div>
+      <div
+        style="opacity: 0;"
+      >
+        <div
+          class="card"
+          style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);"
+        >
+          <div
+            class="num-display"
+          >
+            9
+          </div>
+          <button
+            class="close"
+            data-testid="delete-list"
+          >
+            <svg
+              color="purple"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              style="color: purple;"
+              viewBox="0 0 352 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+              />
+            </svg>
+          </button>
+          <div
+            class="text-display"
+          >
+            Using context Api Item 3
           </div>
         </div>
       </div>

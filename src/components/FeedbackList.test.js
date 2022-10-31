@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import FeedbackList from "./FeedbackList";
 //import userEvent from "@testing-library/user-event";
 import { shallow } from "enzyme";
-import FeedbackData from "../data/FeedbackData";
+
 import { render, screen } from "@testing-library/react";
 
 describe("<FeedbackList/>", () => {
@@ -13,12 +13,12 @@ describe("<FeedbackList/>", () => {
 });
 
 test("should test TodoLists component with default state of array", () => {
-  const wrapper = shallow(<FeedbackList feedback={FeedbackData} />);
+  const wrapper = shallow(<FeedbackList />);
   expect(wrapper).toMatchSnapshot();
 });
 
 test("It should show the message if there is no Feedback data available", () => {
-  render(<FeedbackList feedback={[]} />);
+  render(<FeedbackList />);
   const message = screen.getByTestId("error-message");
   expect(message).toBeInTheDocument();
 });
