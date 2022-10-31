@@ -22,6 +22,7 @@ const FeedbackList = ({ handleDelete }) => {
 
   return (
     <div className="feedback-list">
+      {/* <pre>{JSON.stringify(feedback, undefined, 2)}</pre> */}
       <AnimatePresence>
         {feedback.map((item) => (
           <motion.div

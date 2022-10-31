@@ -3,6 +3,7 @@ import feedbackContext from "../context/FeedbackContext";
 //import RatingSelect from "./RatingSelect";
 import Button from "./shared/Button";
 import Card from "./shared/Card";
+import FeedbackDataService from "../services/feedback.services";
 
 const FeedbackForm = () => {
   const [text, setText] = useState("");
@@ -34,21 +35,48 @@ const FeedbackForm = () => {
     setRating(+e.currentTarget.value);
   };
 
-  const handleSubmit = (e) => {
-    if (e && e.preventDefault) {
-      e.preventDefault();
-    }
-    // e.preventDefault();
+  // const handleSubmit1 = (e) => {
+  //   if (e && e.preventDefault) {
+  //     e.preventDefault();
+  //   }
+  //   // e.preventDefault();
+  //   if (!rating) {
+  //     window.alert("please select the rating");
+  //     return;
+  //   }
+  //   if (text.trim().length > 10 && rating !== "") {
+  //     const newFeedback = {
+  //       text: text,
+  //       rating: rating,
+  //     };
+  //     //console.log(newFeedback);
+  //     addFeedback(newFeedback);
+  //     setText("");
+  //     setBtnDisabled(true);
+  //     setRating(null);
+  //     setSelected(null);
+  //   }
+  // };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     if (!rating) {
       window.alert("please select the rating");
       return;
     }
+
     if (text.trim().length > 10 && rating !== "") {
       const newFeedback = {
         text: text,
         rating: rating,
       };
-      //console.log(newFeedback);
+      console.log(newFeedback);
+
+      try {
+        await FeedbackDataService.addFeedbackDB(newFeedback);
+      } catch (error) {
+        setMessage(error.message);
+      }
       addFeedback(newFeedback);
       setText("");
       setBtnDisabled(true);

@@ -16,7 +16,7 @@ const feedbackCollectionRef = collection(db, "feedback"); //create a reference
 
 class FeedbackDataService {
   //for add the feedback
-  addFeedback = (newFeedback) => {
+  addFeedbackDB = (newFeedback) => {
     return addDoc(feedbackCollectionRef, newFeedback);
   };
 
