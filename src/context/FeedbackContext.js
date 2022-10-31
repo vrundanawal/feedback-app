@@ -16,3 +16,4 @@ export const FeedbackProvider = ({ children }) => {
     </feedbackContext.Provider>
   );
 };
+export default feedbackContext;
