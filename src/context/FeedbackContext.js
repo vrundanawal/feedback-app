@@ -12,17 +12,26 @@ export const FeedbackProvider = ({ children }) => {
     getAllFeedback();
   }, []);
 
-  //get the data from DB
+  //get the all feedback data from DB
   const getAllFeedback = async () => {
-    const data = await feedbackServices.getAllFeedback();
+    const data = await feedbackServices.getAllFeedbackDB();
     //console.log(data.docs);
     setFeedBack(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
 
-  const deleteFeedback = (id) => {
+  // const deleteFeedback = (id) => {
+  //   //console.log("app " + id);
+  //   if (window.confirm("Are you sure you want to delete?")) {
+  //     setFeedBack(feedback.filter((item) => item.id !== id));
+  //   }
+  // };
+
+  const deleteFeedback = async (id) => {
     //console.log("app " + id);
     if (window.confirm("Are you sure you want to delete?")) {
-      setFeedBack(feedback.filter((item) => item.id !== id));
+      await feedbackServices.deleteFeedbackDB(id);
+      // setFeedBack(feedback.filter((item) => item.id !== id));
+      getAllFeedback();
     }
   };
 

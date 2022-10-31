@@ -27,13 +27,13 @@ class FeedbackDataService {
   };
 
   //delete feedback
-  deleteFeedback = (id) => {
+  deleteFeedbackDB = (id) => {
     const feedbackDoc = doc(db, "feedback", id);
     return deleteDoc(feedbackDoc);
   };
 
   //get all the feedback
-  getAllFeedback = () => {
+  getAllFeedbackDB = () => {
     return getDocs(feedbackCollectionRef);
   };
 

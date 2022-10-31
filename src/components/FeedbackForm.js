@@ -73,6 +73,7 @@ const FeedbackForm = () => {
       console.log(newFeedback);
 
       try {
+        //store the data to DB
         await FeedbackDataService.addFeedbackDB(newFeedback);
       } catch (error) {
         setMessage(error.message);
