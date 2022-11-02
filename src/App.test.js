@@ -1,6 +1,5 @@
 import { render } from "@testing-library/react";
 import App from "./App";
-import FeedbackData from "./data/FeedbackData";
 
 // describe - group of related test specs => TEST SUITE
 

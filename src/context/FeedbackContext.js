@@ -3,7 +3,7 @@ import { createContext, useState, useEffect } from "react";
 import feedbackServices from "../services/feedback.services";
 
 //import FeedbackData from "../data/FeedbackData";
-const feedbackContext = createContext();
+const FeedbackContext = createContext();
 
 export const FeedbackProvider = ({ children }) => {
   //const [feedback, setFeedBack] = useState(FeedbackData);
@@ -42,11 +42,11 @@ export const FeedbackProvider = ({ children }) => {
   };
 
   return (
-    <feedbackContext.Provider
+    <FeedbackContext.Provider
       value={{ feedback: feedback, deleteFeedback, addFeedback }}
     >
       {children}
-    </feedbackContext.Provider>
+    </FeedbackContext.Provider>
   );
 };
-export default feedbackContext;
+export default FeedbackContext;

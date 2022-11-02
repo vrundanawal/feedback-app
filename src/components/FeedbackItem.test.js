@@ -34,9 +34,7 @@ test("<FeedbackList/>", () => {
     rating: 5,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   };
-  const { getByTestId } = render(
-    <FeedbackItem item={item} handleDelete={handleDelete} />
-  );
+  const { getByTestId } = render(<FeedbackItem item={item} />);
   const deleteBtn = getByTestId("delete-list");
   fireEvent.click(deleteBtn);
   // expect(handleDelete).toHaveBeenCalledTimes(1);
