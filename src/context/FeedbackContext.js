@@ -12,11 +12,33 @@ export const FeedbackProvider = ({ children }) => {
     getAllFeedback();
   }, []);
 
+  // const getAllFeedback = async () => {
+  //   try {
+  //     const data = await feedbackServices.getAllFeedbackDB();
+  //     console.log(data.docs);
+  //     setFeedBack(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+  //   } catch (error) {
+  //     alert(`The error : Something went wrong `);
+  //     //console.log(`The error : ${error}`);
+  //     throw new Error("Something went wrong");
+  //   }
+  // };
   //get the all feedback data from DB
+
   const getAllFeedback = async () => {
-    const data = await feedbackServices.getAllFeedbackDB();
-    //console.log(data.docs);
-    setFeedBack(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    try {
+      const data = await feedbackServices.getAllFeedbackDB();
+      console.log(data.docs);
+      if (data) {
+        setFeedBack(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      } else {
+        alert("Something went wrong");
+      }
+    } catch (error) {
+      alert(`The error : Something went wrong `);
+      //console.log(`The error : ${error}`);
+      throw new Error("Something error occured");
+    }
   };
 
   // const deleteFeedback = (id) => {
@@ -27,7 +49,6 @@ export const FeedbackProvider = ({ children }) => {
   // };
 
   const deleteFeedback = async (id) => {
-    //console.log("app " + id);
     if (window.confirm("Are you sure you want to delete?")) {
       await feedbackServices.deleteFeedbackDB(id);
       // setFeedBack(feedback.filter((item) => item.id !== id));

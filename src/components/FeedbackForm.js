@@ -71,7 +71,7 @@ const FeedbackForm = () => {
         text: text,
         rating: rating,
       };
-      console.log(newFeedback);
+      // console.log(newFeedback);
 
       try {
         //store the data to DB

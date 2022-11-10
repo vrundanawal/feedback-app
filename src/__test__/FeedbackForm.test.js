@@ -153,12 +153,10 @@ describe("Should render the form component", () => {
     );
   });
 
-  // it("Add the feedback to list", () => {
-  //   render(
-  //     <FeedbackContext.Provider value={ addFeedback }>
-  //       <FeedbackForm />
-  //     </FeedbackContext.Provider>
-  //   );
-  //   expect(addFeedback).toHaveBeenCalledTimes(1);
-  // });
+  window.confirm = jest.fn();
+  const rating = "";
+  it("Should show the alert if the rating is not selected", () => {
+    window.confirm.mockClear();
+    expect(!rating).toBeTruthy();
+  });
 });

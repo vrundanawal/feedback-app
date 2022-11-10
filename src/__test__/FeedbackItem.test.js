@@ -23,8 +23,10 @@ it("should show the feedback item", async () => {
 });
 
 it("should have the delete button", async () => {
+  //const { deleteFeedback, id } = renderComponent();
   renderComponent();
   const deleteBtn = screen.getByTestId("delete-list");
   fireEvent.click(deleteBtn);
   expect(deleteBtn).toBeInTheDocument();
+  // expect(deleteFeedback).toBeCalledWith(id);
 });
