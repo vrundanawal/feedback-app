@@ -1,6 +1,4 @@
 import React, { useState, useContext } from "react";
-
-//import RatingSelect from "./RatingSelect";
 import Button from "./shared/Button";
 import Card from "./shared/Card";
 import FeedbackDataService from "../services/feedback.services";
@@ -35,29 +33,6 @@ const FeedbackForm = () => {
     setSelected(+e.currentTarget.value);
     setRating(+e.currentTarget.value);
   };
-
-  // const handleSubmit1 = (e) => {
-  //   if (e && e.preventDefault) {
-  //     e.preventDefault();
-  //   }
-  //   // e.preventDefault();
-  //   if (!rating) {
-  //     window.alert("please select the rating");
-  //     return;
-  //   }
-  //   if (text.trim().length > 10 && rating !== "") {
-  //     const newFeedback = {
-  //       text: text,
-  //       rating: rating,
-  //     };
-  //     //console.log(newFeedback);
-  //     addFeedback(newFeedback);
-  //     setText("");
-  //     setBtnDisabled(true);
-  //     setRating(null);
-  //     setSelected(null);
-  //   }
-  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();

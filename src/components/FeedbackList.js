@@ -11,19 +11,8 @@ const FeedbackList = () => {
     return <p data-testid="error-message">No FeedBack is available</p>;
   }
 
-  //not to add any animation liabrary for this one. woking without add framer-motion package
-
-  // return (
-  //   <div className="feedback-list">
-  //     {feedback.map((item) => (
-  //       <FeedbackItem key={item.id} item={item} handleDelete={handleDelete} />
-  //     ))}
-  //   </div>
-  // );
-
   return (
     <div className="feedback-list">
-      {/* <pre>{JSON.stringify(feedback, undefined, 2)}</pre> */}
       <AnimatePresence>
         {feedback.map((item) => (
           <motion.div

@@ -6,6 +6,9 @@ import Header from "./components/Header";
 import AboutPage from "./pages/AboutPage";
 import AboutIconLink from "./components/AboutIconLink";
 import { FeedbackProvider } from "./context/FeedbackContext";
+//to show alert messages packag toastify
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
@@ -31,6 +34,8 @@ const App = () => {
           <AboutIconLink />
         </div>
       </Router>
+
+      <ToastContainer />
     </FeedbackProvider>
   );
 };

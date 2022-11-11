@@ -3,10 +3,10 @@ import { db } from "../firebase-config";
 //for api integration need this function which is comming from firebase
 import {
   collection,
-  getDoc,
+  // getDoc,
   getDocs,
   addDoc,
-  updateDoc,
+  // updateDoc,
   deleteDoc,
   doc,
 } from "firebase/firestore";
@@ -21,10 +21,10 @@ class FeedbackDataService {
   };
 
   //update feedback
-  updateFeedback = (id, updatedFeedback) => {
-    const feedbackDoc = doc(db, "feedback", id);
-    return updateDoc(feedbackDoc, updatedFeedback);
-  };
+  // updateFeedback = (id, updatedFeedback) => {
+  //   const feedbackDoc = doc(db, "feedback", id);
+  //   return updateDoc(feedbackDoc, updatedFeedback);
+  // };
 
   //delete feedback
   deleteFeedbackDB = (id) => {
@@ -38,10 +38,10 @@ class FeedbackDataService {
   };
 
   //for a particular feedback
-  getFeedback = (id) => {
-    const feedbackDoc = doc(db, "feedback", id);
-    return getDoc(feedbackDoc);
-  };
+  // getFeedback = (id) => {
+  //   const feedbackDoc = doc(db, "feedback", id);
+  //   return getDoc(feedbackDoc);
+  // };
 }
 
 export default new FeedbackDataService();
